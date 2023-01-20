@@ -15,6 +15,7 @@ struct RectangleView: View {
     // values change.
     @State var length: Double = 100
     @State var width: Double = 5
+    @State var desiredPrecision: Double = 1
     
     // MARK: Computed properties
     var area: Double {
@@ -80,7 +81,7 @@ struct RectangleView: View {
                                 .font(.title2)
                                 .bold()
                             
-                            Text("\(area)")
+                Text("\(area.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
                                 .font(.title2)
             }
             
@@ -90,6 +91,18 @@ struct RectangleView: View {
                                 .bold()
                             
                             Text("\(perimeter)")
+            }
+            
+            // Allow user to control precision
+            
+            Group{
+                Stepper("Precision",
+                        value: $desiredPrecision,
+                        in: 0...6)
+            // Show precision
+                Text("\(desiredPrecision.formatted(.number.precision(.fractionLength(0))))")
+                    .font(.title2)
+                
             }
             
             
