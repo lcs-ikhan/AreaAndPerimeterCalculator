@@ -64,7 +64,6 @@
 		852998FB2979A21C00665313 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				85299927297B259300665313 /* SquareBasedPyramidView.swift */,
 				852998FC2979A21C00665313 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -73,6 +72,7 @@
 		852999032979A3C500665313 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				85299927297B259300665313 /* SquareBasedPyramidView.swift */,
 				852999072979A4A000665313 /* RectangleView.swift */,
 			);
 			path = Views;
